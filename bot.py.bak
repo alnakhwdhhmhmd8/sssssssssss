@@ -1,0 +1,26 @@
+from pyrogram import Client, idle
+from pyromod import listen
+
+
+
+bot = Client(
+    "FR3ON2",
+    api_id=22358868,
+    api_hash="63ce9d714e685b721ee2fa5e0ea06a5a",
+    bot_token="7607227515:AAGSOla4PGeGpb4olWi5yRnQQrnwW5ywhBg",
+    plugins=dict(root="FR3ON")
+    )
+
+DEVS = ["wvvwv3", "wvvwv3"] 
+
+bot_id = bot.bot_token.split(":")[0]
+
+async def start_ahmedbot():
+    print("تم تشغيل الصانع بنجاح..🕊")
+    await bot.start()
+    for hh in DEVS:
+        try:
+            await bot.send_message(hh, "**تم تشغيل الصانع بنجاح ...! ⚡**")
+        except:
+            pass
+    await idle()
